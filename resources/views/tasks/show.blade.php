@@ -2,16 +2,22 @@
 
 @section('content')
 
-    <h1>id = {{ $task->id }} のタスク詳細ページ</h1>
+    <h1>No.{{ $task->id }} のタスク詳細ページ</h1>
 
     <table class="table table-bordered">
         <tr>
+            
             <th>No.</th>
             <td>{{ $task->id }}</td>
         </tr>
         <tr>
+           
             <th>タスク</th>
             <td>{{ $task->content }}</td>
+        </tr>
+        <tr>
+            <th>ステータス</th>
+            <td>{{ $task->status }}</td>
         </tr>
     </table>
     {!! link_to_route('tasks.edit', 'このタスクを編集', ['id' => $task->id], ['class' => 'btn btn-light']) !!}
