@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- ここにページ毎のコンテンツを書く -->
-<h1>タスク一覧</h1>
+<h1>タスクリスト</h1>
 
     @if (Auth::check())
     {{ Auth::user()->name }} さん
