@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- ここにページ毎のコンテンツを書く -->
-<h1>メッセージ一覧</h1>
+<h1>タスク一覧</h1>
 
     @if (Auth::check())
     {{ Auth::user()->name }} さん
@@ -13,7 +13,7 @@
                 <tr>
                     <th>id</th>
                     <th>Status</th>
-                    <th>メッセージ</th>
+                    <th>タスク</th>
                 </tr>
             </thead>
             <tbody>
@@ -29,7 +29,7 @@
     @endif
     
     
-        {!! link_to_route('tasks.create', '新規メッセージの投稿', [], ['class' => 'btn btn-primary']) !!}
+        {!! link_to_route('tasks.create', '新規タスクの投稿', [], ['class' => 'btn btn-primary']) !!}
     @else
         <div class="center jumbotron">
             <div class="text-center">
